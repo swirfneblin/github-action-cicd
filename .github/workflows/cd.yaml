@@ -35,7 +35,7 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64, linux/arm64, linux386
+          platforms: linux/amd64, linux/arm64, linux/386
           tags: ${{ steps.docker_meta.outputs.tags }}
           labels: ${{ steps.docker_meta.outputs.labels }}
 
@@ -52,6 +52,3 @@ jobs:
 
       - name: Set deployment image
         run: kubectl set image deployment goserver goserver=swirfneblin/go-server:${{ steps.docker_meta.outputs.tags }}
-        with:
-          personalAccessToken: ${{ secrets.DIGITALOCEAN_TOKEN }}
-          clusterName: live-k8s
