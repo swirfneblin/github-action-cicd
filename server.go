@@ -7,6 +7,6 @@ func main() {
 	http.ListenAndServe(":3000", nil)
 }
 
-func Home(w http.ResponseWriter, r *http.Request){
-	w.Write([]byte("<h1>Ola mundo kubernetes</h1>"))
+func Home(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("<h1>Ola mundo kubernetes v2</h1>"))
 }
