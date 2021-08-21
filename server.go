@@ -8,5 +8,5 @@ func main() {
 }
 
 func Home(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("<h1>Ola mundo kubernetes v2</h1>"))
+	w.Write([]byte("<h1>Ola mundo kubernetes v3</h1>"))
 }
